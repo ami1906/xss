@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<htlml>
+<head>
+  <title>Reflective XSS Example</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <section class="container">
+    <section class="search_box">
+      <input id="search" type="textbox">
+      <button onclick="printSearchKey()">Search</button>
+    </section>
+    <section class="search_results_header">
+      <h2>Results for <span id="searchKey"></span></h2>
+      <section id="search_results" class="search_results">
+      </section>
+    </section>
+  </section>
+</body>
+<script>
+var data = [
+  {
+    title:'Test Code',
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  },
+  {
+    title:'Test Code',
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  },
+  {
+    title:'Test Code',
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  }
+];
+</script>
+<script src="script.js"></script>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<htlml>
+<head>
+  <title>Persistent XSS Example</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <section class="container">
+    <section class="search_results_header">
+      <h2>Top Stories</h2>
+      <section id="search_results" class="search_results">
+      </section>
+    </section>
+  </section>
+</body>
+<script>
+var data = [
+  {
+    title:'Test Code',
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  },
+  {
+    title:'Test Code',
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  },
+  {
+    title:'Test Code',
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+  },
+  {
+    title:'Test Code',
+    desc:'Test Code<img src="/" onerror = "alert(\'Reflective XSS Attack\')">'
+  }
+];
+</script>
+<script src="script.js"></script>
+</html>
